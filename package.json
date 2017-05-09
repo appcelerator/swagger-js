@@ -8,7 +8,7 @@
     }
   ],
   "description": "swagger-client is a javascript client for use with swaggering APIs.",
-  "version": "2.1.13",
+  "version": "2.2.0",
   "homepage": "http://swagger.io",
   "repository": {
     "type": "git",
@@ -36,7 +36,7 @@
     "js-yaml": "^3.3.0",
     "lodash-compat": "^3.5.0",
     "q": "^1.4.1",
-    "superagent": "^1.2"
+    "superagent": "^3.5.1"
   },
   "devDependencies": {
     "async": "^0.9.0",
@@ -63,6 +63,7 @@
     "karma-mocha": "^0.1.10",
     "karma-source-map-support": "^1.0.0",
     "mocha": "^1.21.3",
+    "mocha-jenkins-reporter": "*",
     "object.assign": "^3.0.0",
     "selenium-webdriver": "^2.45.1",
     "uglifyify": "^3.0.1",

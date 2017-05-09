@@ -18,7 +18,7 @@ var assign = require('object.assign');
 var connect = require('gulp-connect');
 var cors = require('connect-cors');
 
-// This is a workaround for this bug...https://github.com/feross/buffer/issues/79 
+// This is a workaround for this bug...https://github.com/feross/buffer/issues/79
 // Please refactor this, when the bug is resolved!
 // PS: you need to depend on buffer@3.4.3
 var OldBuffer = require.resolve('buffer/');
@@ -110,7 +110,7 @@ gulp.task('test', function () {
   process.env.NODE_ENV = 'test';
   return gulp
     .src(paths.tests)
-    .pipe(mocha({reporter: 'spec'}))
+    .pipe(mocha({reporter: 'mocha-jenkins-reporter'}))
     .on('error', console.log);
 });
 

@@ -11,3 +11,4 @@ coverage/
 .classpath
 .project
 .tm_properties
+junit_report.xml
