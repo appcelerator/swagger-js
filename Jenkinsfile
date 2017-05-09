@@ -1,9 +1,17 @@
 #! groovy
+library 'pipeline-library'
 
 timestamps {
   node('(osx || linux)') {
+    def packageVersion = ''
+    def isPR = false
+
     stage('Checkout') {
       checkout scm
+
+      isPR = env.BRANCH_NAME.startsWith('PR-')
+      packageVersion = jsonParse(readFile('package.json'))['version']
+      currentBuild.displayName = "#${packageVersion}-${currentBuild.number}"
     }
 
     nodejs(nodeJSInstallationName: 'node 6.9.5') {
